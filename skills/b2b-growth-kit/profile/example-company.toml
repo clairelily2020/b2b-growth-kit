@@ -1,0 +1,129 @@
+# DemoCo is fictional. Every example in this repo uses it.
+# Copy this file to profiles/private/<your-company>/company.toml and replace the values.
+# Skills read facts from here instead of inventing them. Leave a value empty ("") if unknown;
+# skills must treat empty values as unknown, never fill them with guesses.
+
+[company]
+name = "DemoCo"
+website = "https://example.com"
+one_liner = "Shared account-research workspace for small B2B sales and marketing teams."
+category = "B2B SaaS / sales intelligence"
+stage = "early-revenue"            # pre-revenue | early-revenue | repeatable | scaling
+team_size = "2-person marketing team plus founder"
+
+[icp]
+summary = "B2B software companies with 20-500 employees and a marketing team of 1-5 people."
+segments = [
+  "Seed to Series B B2B SaaS selling to mid-market",
+  "B2B services firms that run account-based campaigns",
+]
+regions = ["North America", "Western Europe"]
+economic_buyer = "Head of Marketing or founder"
+champion = "Demand generation or marketing ops lead"
+users = ["SDR", "marketing generalist"]
+triggers = [
+  "New marketing leader hired in the last 90 days",
+  "Announced funding round",
+  "Exhibiting at an upcoming industry event",
+]
+exclusions = ["Companies under 10 employees", "B2C brands", "Agencies reselling data"]
+
+[positioning]
+category_frame = "Account research workspace"
+problem = "Account research lives in scattered tabs and spreadsheets, so outreach is generic and slow."
+alternatives = ["Spreadsheets and manual research", "Large sales-intelligence suites", "Freelance researchers"]
+differentiators = [
+  "Research lists are shared and reviewable before outreach starts",
+  "Each account keeps its source links and observation dates",
+]
+# Every proof point must map to an evidence claim_key (see skills/b2b-growth-kit/policies/evidence-and-claims.md).
+proof_points = [
+  { claim_key = "product.capability", statement = "DemoCo organizes account research into shared lists." },
+]
+
+[offer]
+primary = "Team plan with a 14-day trial"
+entry_offer = "Free account-research template plus a 20-account sample list"
+pricing_policy = "Do not state prices in content. Link to the pricing page."
+pricing_url = "https://example.com/pricing"
+cta_label = "Start the trial"
+cta_url = "https://example.com/start"
+
+[offer.utm]
+source_param = "utm_source"
+medium_values = ["cpc", "email", "social", "organic", "partner"]
+campaign_format = "{channel}-{topic}-{yyyymm}"
+
+[claims]
+banned = [
+  "guaranteed meetings or pipeline",
+  "#1 / best / leading without a cited ranking",
+  "verified contact data for every account",
+  "customer logos or quotes without written permission",
+]
+claim_boundary = "DemoCo helps teams organize and review research. It does not guarantee outcomes."
+
+[competitors]
+mention_policy = "Compare only on facts visible on the competitor's public pages, dated and linked."
+named = [
+  { name = "CompetitorA (fictional)", positioning = "All-in-one sales intelligence suite", our_angle = "Lighter setup for small teams" },
+  { name = "CompetitorB (fictional)", positioning = "Contact database", our_angle = "Research context, not raw contacts" },
+]
+
+[voice]
+tone = "Plain, specific, practical. Short sentences. No hype."
+avoid = ["revolutionary", "game-changer", "unlock", "supercharge", "seamless"]
+language = "en"
+
+[[voice.personas]]
+role = "founder"
+display_name = "Alex, founder of DemoCo"
+signature = "Alex\nFounder, DemoCo"
+topics = ["lessons from building the product", "how small teams do account research"]
+
+[[voice.personas]]
+role = "brand"
+display_name = "DemoCo"
+signature = "The DemoCo team"
+topics = ["product updates", "templates", "customer workflows"]
+
+[channels]
+active = ["seo", "linkedin", "x", "google_ads", "cold_email", "linkedin_outbound", "events"]
+linkedin_company_url = "https://www.linkedin.com/company/example"
+x_handle = "@example"
+
+[outreach]
+sending_domains = ["mail.example.com"]
+suppression_source = "CRM property do_not_contact = true, plus the unsubscribe list"
+daily_cap_email_per_inbox = 30
+daily_cap_linkedin_connections = 20
+daily_cap_linkedin_messages = 30
+
+[content.article]
+first_h2 = "Short answer"           # set to "" to disable
+body_h2_min = 5
+body_h2_max = 7
+faq_last = true
+cta_injected_by_template = true     # if true, do not write a CTA block in the body
+tables_allowed = true
+
+[measurement]
+timezone = "UTC"
+currency = "USD"
+crm = "CRM (vendor-neutral)"
+web_analytics = "web analytics (vendor-neutral)"
+product_analytics = "product analytics (vendor-neutral)"
+conversion_events = [
+  { name = "lead_form_submitted", stage = "lead", primary = false },
+  { name = "trial_started", stage = "signup", primary = true },
+  { name = "demo_booked", stage = "opportunity", primary = true },
+  { name = "subscription_created", stage = "customer", primary = true },
+]
+
+[approvals]
+# Roles, not people. See skills/b2b-growth-kit/policies/approval-gates.md.
+publish = "Founder"
+send = "Founder"
+spend = "Founder"
+ads_edit = "Growth lead"
+crm_write = "Growth lead"

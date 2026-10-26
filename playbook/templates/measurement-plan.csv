@@ -1,0 +1,7 @@
+business_event,success_boundary,dedup_key,owner,source_fields,test_exclusion,destination,verification_status
+signup,Account transaction succeeds,registration_id,,source/medium/campaign/content,exclude internal/test,,planned
+demo_booked,Booking provider confirms,booking_id,,original source + identity,exclude internal/test,,planned
+demo_completed,Meeting actually completed,meeting_id,,CRM association,exclude internal/test,,planned
+value_action,Define task-specific completed result,task_id,,user/account association,exclude internal/test,,definition_needed
+order_paid,Payment confirmed,order_id,,order/user/source association,exclude internal/test,,planned
+refund,Refund confirmed,refund_id,,original order_id,exclude internal/test,,planned

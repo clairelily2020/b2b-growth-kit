@@ -1,0 +1,10 @@
+# Private company data never leaves your machine
+profiles/private/*
+!profiles/private/README.md
+.denylist.local
+.env
+.env.*
+outputs/
+__pycache__/
+*.egg-info/
+.DS_Store

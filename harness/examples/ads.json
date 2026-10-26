@@ -1,0 +1,34 @@
+{
+  "synthetic": true,
+  "evidence": [
+    {
+      "id": "e1",
+      "claim_key": "product.capability",
+      "statement": "DemoCo organizes account research into shared lists.",
+      "source": "https://example.com/product",
+      "observed_at": "2026-09-01",
+      "expires_at": "2026-10-01",
+      "review": {
+        "reviewer": "example-reviewer",
+        "reviewed_at": "2026-09-02",
+        "source_checked": true,
+        "decision": "accepted"
+      }
+    }
+  ],
+  "period": "2026-09-01/2026-09-07",
+  "currency": "USD",
+  "timezone": "UTC",
+  "metrics": {
+    "spend": 240,
+    "clicks": 120,
+    "impressions": 4000,
+    "signups": 8,
+    "customers": null,
+    "attributed_revenue": null
+  },
+  "attribution": {
+    "identity_join_verified": false,
+    "same_cohort_and_window": false
+  }
+}

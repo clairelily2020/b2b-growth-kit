@@ -1,0 +1,25 @@
+{
+  "synthetic": true,
+  "evidence": [
+    {
+      "id": "e1",
+      "claim_key": "product.capability",
+      "statement": "DemoCo organizes account research into shared lists.",
+      "source": "https://example.com/product",
+      "observed_at": "2026-09-01",
+      "expires_at": "2026-10-01",
+      "review": {
+        "reviewer": "example-reviewer",
+        "reviewed_at": "2026-09-02",
+        "source_checked": true,
+        "decision": "accepted"
+      }
+    }
+  ],
+  "signal": "Three fictional interviews describe duplicate account research.",
+  "hypothesis": "Shared research could reduce repeated work; this does not prove purchase intent.",
+  "experiment": "Test a draft workflow with consenting pilot users.",
+  "metric": "Time to produce a reviewed account shortlist",
+  "stop_rule": "Stop if participants cannot verify the source records.",
+  "measurement_window": "Two weeks after pilot approval"
+}

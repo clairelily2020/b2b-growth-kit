@@ -1,0 +1,17 @@
+[project]
+name = "b2b-growth-kit-harness"
+version = "1.0.0"
+description = "Deterministic, offline checks for B2B marketing drafts: evidence, metrics, attribution, landing pages, revenue handoffs and approvals."
+requires-python = ">=3.11"
+dependencies = []
+license = "MIT"
+
+[project.scripts]
+b2b-harness = "b2b_harness.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["b2b_harness*"]

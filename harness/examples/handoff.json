@@ -1,0 +1,30 @@
+{
+  "synthetic": true,
+  "evidence": [
+    {
+      "id": "e1",
+      "claim_key": "lead.intent",
+      "statement": "The prospect asked for pricing for a three-month pilot on a call.",
+      "source": "call-notes/example-2026-09-10.md",
+      "observed_at": "2026-09-10",
+      "expires_at": "2026-12-10",
+      "review": {
+        "reviewer": "example-reviewer",
+        "reviewed_at": "2026-09-11",
+        "source_checked": true,
+        "decision": "accepted"
+      }
+    }
+  ],
+  "account": "Example Account (fictional)",
+  "contact_role": "Head of Marketing",
+  "owner_role": "Founder",
+  "fit": {"status": "fit", "reason": "B2B software, 120 employees, two-person marketing team"},
+  "intent": {"status": "stated", "evidence_ids": ["e1"]},
+  "permission": {"contact_basis": "prospect replied and asked for pricing", "suppression_checked": true},
+  "current_stage": "mql",
+  "proposed_stage": "sql",
+  "stage_evidence_ids": ["e1"],
+  "next_action": "Send a scoped pilot proposal",
+  "next_action_date": "2026-09-19"
+}
